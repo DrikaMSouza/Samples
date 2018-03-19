@@ -1,0 +1,83 @@
+<div class="row">
+  <div class="col-xs-12">
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+      <div class="row">
+        <h2>Add User</h2>
+      </div>
+      <div class="row">
+        <div class="col-xs-6">
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input
+              type="text"
+              id="firstName"
+              formControlName="firstName"
+              class="form-control" aria-describedby="firstNameHelp" placeholder="FirstName MiddleName">
+              <small id="firstNameHelp" class="form-text text-muted">This is a note about the field</small>
+          </div>
+        </div>
+        <div class="col-xs-6">
+          <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input
+              type="text"
+              id="lastName"
+              formControlName="lastName"
+              class="form-control"
+              aria-describedby="lastNameHelp" placeholder="LastName">
+              <small id="lastNameHelp" class="form-text text-muted">This is a note about the field</small>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-6">
+          <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" formControlName="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="name.lastname@exxonmobile.com">
+              <small id="emailHelp" class="form-text text-muted">This is a note about the field</small>
+
+          </div>
+        </div>
+        <div class="col-xs-6">
+          <div class="row">
+            <div class="col-xs-6">
+                <div class="form-group">
+                  <label for="description">Field</label>
+                  <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="fieldField" value="1" checked="fieldField === 1" >
+                      <label for="fieldField">Field</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="fieldField" value="0" checked="fieldField === 0"  >
+                      <label for="fieldOffice">Office</label>
+                    </div>
+                </div>
+              </div>
+              <div class="col-xs-6">
+                  <div class="form-group">
+                    <label for="description">Role/s </label>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" value="true" name="fieldRole" value="1" checked="fieldRole === 1" >
+                        <label class="form-check-label" for="roleUser">User</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" value="false" type="radio" name="fieldRole"  value="0" checked="fieldRole === 0"  >
+                        <label class="form-check-label" for="roleAdmin">Admin</label>
+                      </div>
+                  </div>
+                </div>
+                <div class="row pull-right">
+                    <div class="col-md-12">
+                      <button type="button" class="btn btn" (click)="onCancel()">Cancel</button>
+                      <button
+                        type="submit"
+                        class="btn btn"
+                        >Add User</button>
+                    </div>
+                  </div>
+            </div>
+          </div>
+      </div>
+    </form>
+  </div>
+</div>

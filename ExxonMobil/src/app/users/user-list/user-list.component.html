@@ -1,0 +1,18 @@
+
+<div class="row">
+  <div class="col-xs-12">
+    <div class="row" style="background: #000;" >
+          <div class="col-6 col-md-4"><span style="color:#ffff">Name</span></div>
+          <div class="col-6 col-md-4"><span style="color:#ffff">Email</span></div>
+          <div class="col-6 col-md-4">&nbsp;</div>
+</div>
+<br />
+      <div class="row" 
+      *ngFor="let userEl of users; let i = index" >
+        <div class="col-6 col-md-4">{{ userEl.firstName }} {{ userEl.lastName }}</div>
+        <div class="col-6 col-md-4">{{ userEl.email }}</div>
+        <div class="col-6 col-md-4"><button class="btn" style="background: #ffff;" (click)="onEditUser(i)" ><span class="glyphicon glyphicon-pencil"></span></button>&nbsp;
+        <button  class="btn"  style="background: #ffff;"  type="button"  (click)="onDeleteUser(i)" ><span class="glyphicon glyphicon-trash"></span></button></div>
+        </div>
+  </div>
+</div>
